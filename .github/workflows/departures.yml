@@ -1,0 +1,44 @@
+name: departures
+
+on:
+  schedule:
+    - cron: "23 */4 * * *" # every four hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["station/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: departures
+  cancel-in-progress: true
+
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the board
+        run: python station/build.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if anything moved
+        run: |
+          git add assets station/cache.json
+          if git diff --cached --quiet; then
+            echo "Nothing moved on the board."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "board: refresh departures"
+          git pull --rebase --autostash
+          git push
