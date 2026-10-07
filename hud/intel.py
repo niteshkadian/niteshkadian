@@ -23,7 +23,7 @@ query($login: String!) {
     createdAt
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
       totalCount
-      nodes { stargazerCount languages(first: 10) { edges { size node { name } } } }
+      nodes { name stargazerCount languages(first: 10) { edges { size node { name } } } }
     }
     contributionsCollection {
       contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
@@ -69,14 +69,16 @@ def _fetch(login: str) -> dict:
     if body.get("errors"):
         raise RuntimeError(body["errors"])
     user = body["data"]["user"]
+    # the profile repo holds this generator; leave it out so the HUD doesn't measure itself
+    repos = [r for r in user["repositories"]["nodes"] if r["name"].lower() != login.lower()]
     langs: dict[str, int] = {}
-    for repo in user["repositories"]["nodes"]:
+    for repo in repos:
         for e in repo["languages"]["edges"]:
             langs[e["node"]["name"]] = langs.get(e["node"]["name"], 0) + e["size"]
     return {
         "created_at": user["createdAt"],
-        "repos": user["repositories"]["totalCount"],
-        "stars": sum(r["stargazerCount"] for r in user["repositories"]["nodes"]),
+        "repos": len(repos),
+        "stars": sum(r["stargazerCount"] for r in repos),
         "languages": dict(sorted(langs.items(), key=lambda kv: -kv[1])),
         "total": user["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "days": [
