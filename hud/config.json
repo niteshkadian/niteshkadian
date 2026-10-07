@@ -1,0 +1,58 @@
+{
+  "login": "niteshkadian",
+  "name": "Nitesh Kadian",
+  "callsign": "STUXDAY",
+  "clan": "NK",
+  "role": "Full-Stack Developer",
+  "disciplines": ["Web", "Mobile", "AI", "Systems"],
+  "intro_time": "06:42:13",
+  "location_line": "Somewhere between the frontend and the database",
+  "utc_offset_minutes": 330,
+
+  "contact": {
+    "email": "niteshkadian0668@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/niteshkadian",
+    "discord": "https://discord.gg/yVsNKkY95N"
+  },
+
+  "killfeed": ["NULL_POINTER", "RACE_CONDITION", "MERGE_CONFLICT", "TECH_DEBT"],
+
+  "loadout": {
+    "class_name": "FULL STACK",
+    "wildcard": "GUNFIGHTER",
+    "primary": {
+      "name": "NK-26 FULLSTACK",
+      "type": "ASSAULT RIFLE",
+      "chamber": "TypeScript",
+      "camo": "Tailwind CSS",
+      "attachments": [
+        ["OPTIC", "React"],
+        ["BARREL", "Next.js"],
+        ["MUZZLE", "Vercel"],
+        ["UNDERBARREL", "Node.js"],
+        ["MAGAZINE", "PostgreSQL"],
+        ["AMMUNITION", "REST · GraphQL"],
+        ["REAR GRIP", "Git"],
+        ["STOCK", "Docker"]
+      ],
+      "stats": [["ACCURACY", 84], ["DAMAGE", 90], ["RANGE", 96], ["FIRE RATE", 88], ["MOBILITY", 82], ["CONTROL", 79]]
+    },
+    "secondary": { "name": "PY-3 SIDEARM", "chamber": "Python", "attachments": ["NumPy", "Pandas", "PyTorch", "FastAPI"] },
+    "lethal": { "name": "C4", "line": "rm -rf node_modules" },
+    "tactical": { "name": "STIM", "line": "Coffee. Instant heal." },
+    "perks": [
+      { "name": "OVERKILL", "line": "Second primary: Kotlin · Dart · Flutter" },
+      { "name": "COLD-BLOODED", "line": "Calm when prod is on fire" },
+      { "name": "AMPED", "line": "Fast weapon swaps between stacks" }
+    ],
+    "field_upgrade": { "name": "TROPHY SYSTEM", "line": "Tests intercept bugs before impact" }
+  },
+
+  "killstreaks": [
+    { "name": "UAV", "days": 3, "line": "Code review. Every bug shows on the map." },
+    { "name": "CRUISE MISSILE", "days": 5, "line": "CI pipeline. One guided push." },
+    { "name": "CHOPPER GUNNER", "days": 10, "line": "Test suite. Overwatch on every merge." },
+    { "name": "JUGGERNAUT", "days": 15, "line": "Refactor. Slow, armored, unstoppable." },
+    { "name": "TACTICAL NUKE", "days": 30, "line": "Ship to production. Game over." }
+  ]
+}

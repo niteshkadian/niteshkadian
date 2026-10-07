@@ -1,22 +1,22 @@
-name: departures
+name: intel
 
 on:
   schedule:
-    - cron: "23 */4 * * *" # every four hours
+    - cron: "45 18 * * *" # 00:15 IST, so the DAY counter turns over at midnight
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["station/**"]
+    paths: ["hud/**"]
 
 permissions:
   contents: write
 
 concurrency:
-  group: departures
+  group: intel
   cancel-in-progress: true
 
 jobs:
-  board:
+  hud:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,20 +25,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Rebuild the board
-        run: python station/build.py
+      - name: Refresh live intel and rebuild the HUD
+        run: python hud/build.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit if anything moved
+      - name: Commit if the HUD changed
         run: |
-          git add assets station/cache.json
+          git add assets hud/intel.json
           if git diff --cached --quiet; then
-            echo "Nothing moved on the board."
+            echo "No change in intel."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "board: refresh departures"
+          git commit -m "intel: refresh HUD"
           git pull --rebase --autostash
           git push

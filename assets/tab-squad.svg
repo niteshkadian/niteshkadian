@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56" role="img" aria-label="Menu tab 05: Squad"><title>Menu tab 05: Squad</title><style>
+text{font-family:'Helvetica Neue','Segoe UI',Roboto,Arial,sans-serif}
+:where(text:not([fill])){fill:#ECEEE6}
+.cond{font-family:'DIN Condensed','Bahnschrift Condensed','Bahnschrift SemiBold Condensed','Barlow Condensed','Roboto Condensed','Arial Narrow',Bahnschrift,'Helvetica Neue',Arial,sans-serif;font-stretch:condensed;font-weight:700}
+.mono{font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.sub{fill:#969C90}.dim{fill:#5C6258}.acc{fill:#C6F432}
+.fr{fill:#5CB8FF}.en{fill:#FF4B3E}.gold{fill:#F4B740}
+.cap{font-size:11px;font-weight:700;letter-spacing:2.4px}
+.in{animation:in-fade .5s ease-out backwards}
+.in-up{animation:in-up .55s cubic-bezier(.2,.8,.2,1) backwards}
+.in-down{animation:in-down .55s cubic-bezier(.2,.8,.2,1) backwards}
+.in-left{animation:in-left .6s cubic-bezier(.2,.8,.2,1) backwards}
+.in-right{animation:in-right .6s cubic-bezier(.2,.8,.2,1) backwards}
+.in-scale{animation:in-scale .5s cubic-bezier(.2,.8,.2,1) backwards;transform-box:fill-box;transform-origin:center}
+.in-wipe{animation:in-wipe .7s cubic-bezier(.6,0,.2,1) backwards;transform-box:fill-box;transform-origin:left center}
+@keyframes in-fade{from{opacity:0}}
+@keyframes in-up{from{opacity:0;transform:translateY(14px)}}
+@keyframes in-down{from{opacity:0;transform:translateY(-14px)}}
+@keyframes in-left{from{opacity:0;transform:translateX(-24px)}}
+@keyframes in-right{from{opacity:0;transform:translateX(24px)}}
+@keyframes in-scale{from{opacity:0;transform:scale(.6)}}
+@keyframes in-wipe{from{transform:scaleX(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blink{animation:blink 1.4s steps(2,jump-none) infinite}
+.spin{animation:spin 8s linear infinite;transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><defs>
+<filter id="grain" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11" stitchTiles="stitch"/>
+  <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .06 0"/>
+</filter>
+<pattern id="grid8" width="8" height="8" patternUnits="userSpaceOnUse">
+  <path d="M8 0H0V8" fill="none" stroke="#232722" stroke-width=".6"/>
+</pattern>
+<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+  <rect width="2" height="6" fill="#232722"/>
+</pattern>
+
+<linearGradient id="lit" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#C6F432" stop-opacity="0"/>
+  <stop offset="1" stop-color="#C6F432" stop-opacity=".16"/>
+</linearGradient>
+<filter id="glow" x="-10%" y="-200%" width="120%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter>
+<linearGradient id="tshade" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity=".035"/>
+  <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+</defs><clipPath id="tc"><path d="M0 0H200L200 0V44L188 56H0L0 56V0Z"/></clipPath><path d="M0 0H200L200 0V44L188 56H0L0 56V0Z" fill="#0A0B0A"/><path d="M0 0H200L200 0V44L188 56H0L0 56V0Z" fill="url(#grid8)" opacity=".35"/><path d="M0 0H200L200 0V44L188 56H0L0 56V0Z" fill="#000" filter="url(#grain)"/><rect width="200" height="56" fill="url(#tshade)"/><path d="M0 .5H199.5V43.8L187.8 55.5H0" fill="none" stroke="#343933"/><rect x="0" y="17" width="1" height="22" fill="#343933"/><g class="in" style="animation-delay:0.10s"><rect x="162.5" y="17.5" width="23" height="21" rx="3.5" fill="#1B1F1A" stroke="#969C90" stroke-opacity=".75"/><rect x="164" y="34.5" width="20" height="3" rx="1.5" fill="#000" opacity=".45"/><text x="174.0" y="32.2" text-anchor="middle" font-size="12" font-weight="700" style="fill:#ECEEE6">E</text></g><g class="in-down" style="animation-delay:0.33s"><text x="63.3" y="27.5" class="mono" font-size="11" font-weight="700" letter-spacing="0.6" text-anchor="start"><tspan style="fill:#5C6258">05</tspan></text><text x="84.7" y="36.5" class="cond" font-size="22" text-anchor="start" textLength="52.0" lengthAdjust="spacingAndGlyphs" style="fill:#969C90" letter-spacing="1.2">SQUAD</text></g></svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 156" width="1000" height="156" role="img" aria-label="Exfil complete. STUXDAY out."><title>Exfil complete. STUXDAY out.</title><style>
+text{font-family:'Helvetica Neue','Segoe UI',Roboto,Arial,sans-serif}
+:where(text:not([fill])){fill:#ECEEE6}
+.cond{font-family:'DIN Condensed','Bahnschrift Condensed','Bahnschrift SemiBold Condensed','Barlow Condensed','Roboto Condensed','Arial Narrow',Bahnschrift,'Helvetica Neue',Arial,sans-serif;font-stretch:condensed;font-weight:700}
+.mono{font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.sub{fill:#969C90}.dim{fill:#5C6258}.acc{fill:#C6F432}
+.fr{fill:#5CB8FF}.en{fill:#FF4B3E}.gold{fill:#F4B740}
+.cap{font-size:11px;font-weight:700;letter-spacing:2.4px}
+.in{animation:in-fade .5s ease-out backwards}
+.in-up{animation:in-up .55s cubic-bezier(.2,.8,.2,1) backwards}
+.in-down{animation:in-down .55s cubic-bezier(.2,.8,.2,1) backwards}
+.in-left{animation:in-left .6s cubic-bezier(.2,.8,.2,1) backwards}
+.in-right{animation:in-right .6s cubic-bezier(.2,.8,.2,1) backwards}
+.in-scale{animation:in-scale .5s cubic-bezier(.2,.8,.2,1) backwards;transform-box:fill-box;transform-origin:center}
+.in-wipe{animation:in-wipe .7s cubic-bezier(.6,0,.2,1) backwards;transform-box:fill-box;transform-origin:left center}
+@keyframes in-fade{from{opacity:0}}
+@keyframes in-up{from{opacity:0;transform:translateY(14px)}}
+@keyframes in-down{from{opacity:0;transform:translateY(-14px)}}
+@keyframes in-left{from{opacity:0;transform:translateX(-24px)}}
+@keyframes in-right{from{opacity:0;transform:translateX(24px)}}
+@keyframes in-scale{from{opacity:0;transform:scale(.6)}}
+@keyframes in-wipe{from{transform:scaleX(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blink{animation:blink 1.4s steps(2,jump-none) infinite}
+.spin{animation:spin 8s linear infinite;transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.wipe-r{animation:in-wipe .8s cubic-bezier(.6,0,.2,1) backwards;transform-box:fill-box;transform-origin:right center}
+.wipe-l{animation:in-wipe .8s cubic-bezier(.6,0,.2,1) backwards;transform-box:fill-box;transform-origin:left center}
+</style><defs>
+<filter id="grain" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11" stitchTiles="stitch"/>
+  <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .06 0"/>
+</filter>
+<pattern id="grid8" width="8" height="8" patternUnits="userSpaceOnUse">
+  <path d="M8 0H0V8" fill="none" stroke="#232722" stroke-width=".6"/>
+</pattern>
+<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+  <rect width="2" height="6" fill="#232722"/>
+</pattern>
+<radialGradient id="halo"><stop offset="0" stop-color="#C6F432" stop-opacity=".07"/><stop offset="1" stop-color="#C6F432" stop-opacity="0"/></radialGradient></defs><path d="M18.5 0.5H999.5L999.5 0.5V137.5L981.5 155.5H0.5L0.5 155.5V18.5Z" fill="#0A0B0A"/><path d="M18.5 0.5H999.5L999.5 0.5V137.5L981.5 155.5H0.5L0.5 155.5V18.5Z" fill="url(#grid8)" opacity=".35"/><path d="M18.5 0.5H999.5L999.5 0.5V137.5L981.5 155.5H0.5L0.5 155.5V18.5Z" fill="#000" filter="url(#grain)"/><path d="M18.5 0.5H999.5L999.5 0.5V137.5L981.5 155.5H0.5L0.5 155.5V18.5Z" fill="none" stroke="#343933"/><ellipse cx="500.0" cy="62.7" rx="206" ry="44" fill="url(#halo)"/><path d="M36 57.7v11M964 57.7v11" stroke="#343933"/><g class="in" style="animation-delay:0.05s"><text x="500.0" y="30" class="mono" font-size="11" font-weight="700" letter-spacing="1.8" text-anchor="middle"><tspan style="fill:#969C90">DAY 784</tspan><tspan style="fill:#5C6258"> // </tspan><tspan style="fill:#969C90">651 CONTRIBUTIONS</tspan><tspan style="fill:#5C6258"> // </tspan><tspan style="fill:#969C90">LVL 37</tspan></text></g><g class="wipe-r" style="animation-delay:0.30s"><rect x="36" y="62.7" width="297.0" height="1" fill="#343933"/><rect x="289.0" y="61.7" width="44" height="3" fill="#C6F432"/></g><g class="wipe-l" style="animation-delay:0.30s"><rect x="667.0" y="62.7" width="297.0" height="1" fill="#343933"/><rect x="667.0" y="61.7" width="44" height="3" fill="#C6F432"/></g><g class="in-scale" style="animation-delay:0.10s"><text x="500.0" y="80" class="cond" font-size="48" text-anchor="middle" textLength="274.1" lengthAdjust="spacingAndGlyphs" style="fill:#ECEEE6" letter-spacing="2">EXFIL COMPLETE</text></g><g class="in-up" style="animation-delay:0.45s"><text x="500.0" y="106" class="cond" font-size="20" text-anchor="middle" textLength="134.6" lengthAdjust="spacingAndGlyphs" style="fill:#969C90" letter-spacing="4">STUXDAY OUT.</text></g><rect x="36" y="120" width="928" height="1" fill="#232722"/><g class="in" style="animation-delay:0.80s"><circle class="spin" cx="44" cy="138" r="6" fill="none" stroke="#C6F432" stroke-width="2" stroke-dasharray="26 12"/><text x="58" y="142" class="mono" font-size="11" font-weight="700" letter-spacing="1.8" text-anchor="start"><tspan style="fill:#969C90">PROGRESS SAVED</tspan></text><g class="blink"><text x="500.0" y="142.5" class="mono" font-size="12" font-weight="700" letter-spacing="2.4" text-anchor="middle"><tspan style="fill:#ECEEE6">[ PRESS ANY KEY ]</tspan></text></g><text x="964" y="142" class="mono" font-size="11" font-weight="700" letter-spacing="1.8" text-anchor="end"><tspan style="fill:#969C90">BACK TO TOP</tspan></text><rect x="839.5" y="127.5" width="23" height="21" rx="3.5" fill="#1B1F1A" stroke="#969C90" stroke-opacity=".75"/><rect x="841" y="144.5" width="20" height="3" rx="1.5" fill="#000" opacity=".45"/><g transform="translate(851.0 137.0)" fill="none" stroke="#ECEEE6" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter"><path d="M-5 3L0 -2L5 3"/></g></g></svg>
